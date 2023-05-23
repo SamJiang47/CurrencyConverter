@@ -1,6 +1,5 @@
 body{
      background: rgb(20,244,207);
-     background: -moz-radial-gradient(center, rgb(20,244,207) 0%, rgb(37,123,203) 50%, rgb(27,47,175) 100%);
-     background: -webkit-radial-gradient(center, rgb(20,244,207) 0%, rgb(37,123,203) 50%, rgb(27,47,175) 100%);
-     background: radial-gradient(ellipse at center, rgb(20,244,207) 0%, rgb(37,123,203) 50%, rgb(27,47,175) 100%);
+     background: -moz-radial-gradient(center, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
+     background: -webkit-radial-gradient(center, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
     }
