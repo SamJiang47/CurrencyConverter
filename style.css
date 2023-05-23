@@ -7,12 +7,12 @@ body{
      background: -webkit-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
      background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
     }
-    title{
+    h1{
           font-family: "Arial Black", Gadget, sans-serif;
           font-size: 18px;
           letter-spacing: 1px;
           word-spacing: 2px;
-          color: black;
+          color: #2A58B8;
           display: flex;
           position: relative;
           right: 30px;
