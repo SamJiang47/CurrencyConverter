@@ -9,11 +9,60 @@ body{
     }
     h1{
           font-family: "Arial Black", Gadget, sans-serif;
-          font-size: 18px;
+          font-size: 35px;
           letter-spacing: 1px;
           word-spacing: 2px;
           color: #2A58B8;
           display: flex;
           position: relative;
-          right: 30px;
+          left: 430px;
          }
+    .trends{
+              font-family: "Arial Black", Gadget, sans-serif;
+              font-size: 28px;
+              letter-spacing: 1px;
+              word-spacing: 2px;
+              color: #FF00FF;
+              display: flex;
+              position: relative;
+              left: 167px;
+              top: 159px;
+             }
+    .Amount1{
+            font-family: "Arial Black", Gadget, sans-serif;
+            font-size: 22px;
+            color: black;
+            display: flex;
+            position: relative;
+            left: 240px;
+            top: 127px;
+           }
+    .Amount2{
+             position: relative;
+             left: 400px;
+             top: 127px;
+            }
+    .From{
+          font-family: "Arial Black", Gadget, sans-serif;
+          font-size: 22px;
+          color: black;
+          display: flex;
+          position: relative;
+          left: 560px;
+          top: 53px;
+         }
+    .To{
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 22px;
+        color: black;
+        display: flex;
+        position: relative;
+        left: 920px;
+        top: 20px;
+       }
+    .Convert{
+              
+              position: relative;
+              left: 120px;
+              top: 40px;
+            }
