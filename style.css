@@ -8,39 +8,39 @@ body{
      background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
     }
     h1{
-          font-family: "Arial Black", Gadget, sans-serif;
-          font-size: 35px;
-          letter-spacing: 1px;
-          word-spacing: 2px;
-          color: #2A58B8;
-          display: flex;
-          position: relative;
-          left: 430px;
-         }
+       font-family: "Arial Black", Gadget, sans-serif;
+       font-size: 35px;
+       letter-spacing: 1px;
+       word-spacing: 2px;
+       color: #2A58B8;
+       display: flex;
+       position: relative;
+       left: 430px;
+      }
     .trends{
               font-family: "Arial Black", Gadget, sans-serif;
               font-size: 28px;
               letter-spacing: 1px;
               word-spacing: 2px;
-              color: #FF00FF;
+              color: #113300;
               display: flex;
               position: relative;
-              left: 167px;
-              top: 159px;
+              left: 115px;
+              top: 80px;
              }
     .Amount1{
-            font-family: "Arial Black", Gadget, sans-serif;
-            font-size: 22px;
-            color: black;
-            display: flex;
-            position: relative;
-            left: 121px;
-            top: 63.5px;
-           }
+             font-family: "Arial Black", Gadget, sans-serif;
+             font-size: 22px;
+             color: black;
+             display: flex;
+             position: relative;
+             left: 121px;
+             top: 15px;
+            }
     .Amount2{
              position: relative;
              left: 240px;
-             top: 115px;
+             top: 18px;
             }
     .From{
           font-family: "Arial Black", Gadget, sans-serif;
@@ -49,7 +49,7 @@ body{
           display: flex;
           position: relative;
           left: 560px;
-          top: 53px;
+          bottom: 45px;
          }
     .To{
         font-family: "Arial Black", Gadget, sans-serif;
@@ -58,13 +58,61 @@ body{
         display: flex;
         position: relative;
         left: 920px;
-        top: 20px;
+        bottom: 76px;
        }
-    .Convert{
-              position: relative;
-              left: 120px;
-              top: 40px;
-            }
+     .Convert{
+               color: rgb(255, 255, 255); 
+               font-size: 28px; 
+               line-height: 30px; 
+               border-radius: 6px; 
+               font-family: Georgia, serif; 
+               font-weight: normal; 
+               text-decoration: none; 
+               font-style: normal; 
+               font-variant: normal; 
+               text-transform: none; 
+               background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+               box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+               border: 2px solid rgb(28, 110, 164); 
+               display: inline-block;
+               position: relative;
+               left: 240px;
+               bottom: 32px;
+             }
+     .Convert:hover {
+                     background:grey; 
+                    }
+     .Convert:active {
+                      background:#FF00FF; 
+                     }
      .Trends7d{
-               
+               position: relative;
+               left: 200px;
+               top: 50px;           
               }
+     .Trends30d{
+                position: relative;
+                left: 200px;
+                top: 50px; 
+               }
+                  
+
+
+
+
+     
+     /*                .box {
+           width: 350px;
+           inline-size: 350px;
+           height: 150px;
+           block-size: 150px;
+           margin: 10px;
+           padding: 25px;
+           border: 5px solid black;
+          }
+     */
+     /* position: relative;
+        left: 116px;
+        bottom: 17px;
+         border-radius: 6px; 
+                
