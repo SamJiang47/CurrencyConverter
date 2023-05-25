@@ -34,13 +34,13 @@ body{
             color: black;
             display: flex;
             position: relative;
-            left: 240px;
-            top: 127px;
+            left: 121px;
+            top: 63.5px;
            }
     .Amount2{
              position: relative;
-             left: 400px;
-             top: 127px;
+             left: 240px;
+             top: 115px;
             }
     .From{
           font-family: "Arial Black", Gadget, sans-serif;
@@ -61,8 +61,10 @@ body{
         top: 20px;
        }
     .Convert{
-              
               position: relative;
               left: 120px;
               top: 40px;
             }
+     .Trends7d{
+               
+              }
