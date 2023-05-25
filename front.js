@@ -1,18 +1,17 @@
-let base = "";
-let target = "";
 
-///////////////////
-//!!!!!modify button variable
-const btn1 = document.getElementById("convert_btn");
-let number1 = document.getElementById("Input");
+///!!!!!!
+const base = document.getElementsByClassName('From');
+
+//!!!!!!!!
+const target = document.getElementsByClassName('To');
+
+//!!!!!!!
+const btn1 = document.getElementsByClassName("Convert");
 
 btn1.addEventListener('click',function(){
-    //!!!!!conver from
-    var base = 
-    //!!!!!convert to
-    var target = 
-    //!!!!!convert amount
-    var amo = number1.value;
+    
+    //!!!!!convert amount 不确定
+    const amo = document.getElementById("Amount2");
 
     const xhr = new XMLHttpRequest(); //Define XMLhttp object
     xhr.open('GET',`http://localhost:3000/con/${base}/${target}/${amo}`);
@@ -21,18 +20,19 @@ btn1.addEventListener('click',function(){
     xhr.onload = function(){ //Once we get response
         const body = JSON.parse(xhr.responseText)  //Transfer from JSON format
         
-        //!!!!!!Display output
-        document.getElementById('result').innerHTML = `Temperature:${temp} °F`;
+
+        //Example output: body = {"result":706};
+        //!!!!!!Display output(Not sure)
+        // Change elementbyID
+        document.getElementById('result').innerHTML = `${amo} ${base} is ${body.result} in ${target}`;
     }
 })
 
 //!!!!!modify button variable
-const btn2 = document.getElementById("convert_btn");
+const btn7 = document.getElementsByClassName("Trends7d");
 
-btn2.addEventListener('click',function(){
-    //!!!!!conver to
+btn7.addEventListener('click',function(){
 
-    //!!!!!convert from
 
     const xhr = new XMLHttpRequest(); //Define XMLhttp object
     xhr.open('GET',`http://localhost:3000/7day/${base}/${target}`);
@@ -52,13 +52,9 @@ btn2.addEventListener('click',function(){
 
 
 //!!!!!modify button variable
-const btn3 = document.getElementById("convert_btn");
+const btn3 = document.getElementsByClassName("Trends30d");
 
 btn3.addEventListener('click',function(){
-    //!!!!!conver to
-
-    //!!!!!convert from
-
     const xhr = new XMLHttpRequest(); //Define XMLhttp object
     xhr.open('GET',`http://localhost:3000/30day/${base}/${target}`);
     xhr.send(); //Send requent
