@@ -1,22 +1,25 @@
 html{
      height: 100%;
     }
-body{
-     background: rgb(20,244,207);
-     background: -moz-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
-     background: -webkit-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
-     background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
-    }
+    body{
+          background: rgb(20,244,207);
+          background: -moz-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
+          background: -webkit-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
+          background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
+        }
     h1{
        font-family: "Arial Black", Gadget, sans-serif;
        font-size: 35px;
        letter-spacing: 1px;
        word-spacing: 2px;
-       color: #2A58B8;
+       color: #3377FF;
        display: flex;
        position: relative;
-       left: 430px;
+       left: 650px;
       }
+     span{
+           color: #FFD500;
+         }
     .trends{
               font-family: "Arial Black", Gadget, sans-serif;
               font-size: 28px;
@@ -25,8 +28,8 @@ body{
               color: #113300;
               display: flex;
               position: relative;
-              left: 115px;
-              top: 80px;
+              left: 60px;
+              top: 30px;
              }
     .Amount1{
              font-family: "Arial Black", Gadget, sans-serif;
@@ -58,7 +61,7 @@ body{
         display: flex;
         position: relative;
         left: 920px;
-        bottom: 76px;
+        bottom: 97px;
        }
      .Convert{
                color: rgb(255, 255, 255); 
@@ -77,42 +80,109 @@ body{
                display: inline-block;
                position: relative;
                left: 240px;
-               bottom: 32px;
+               bottom: 75px;
              }
      .Convert:hover {
-                     background:grey; 
+                     background:#99FFFF; 
                     }
      .Convert:active {
                       background:#FF00FF; 
                      }
      .Trends7d{
+               color: #FFFF00; 
+               font-size: 28px; 
+               line-height: 30px; 
+               border-radius: 6px; 
+               font-family: Georgia, serif; 
+               font-weight: normal; 
+               text-decoration: none; 
+               font-style: normal; 
+               font-variant: normal; 
+               text-transform: none; 
+               background: #801A99;
+               border: #801A99; 
+               display: inline-block;
                position: relative;
                left: 200px;
-               top: 50px;           
+               top: 60px;           
               }
+     .Trends7d:hover {
+                      background:grey; 
+                     }
+     .Trends7d:active {
+                       background:#FF00FF; 
+                      }
      .Trends30d{
+                color: #FFFF00; 
+                font-size: 28px; 
+                line-height: 30px; 
+                border-radius: 6px; 
+                font-family: Georgia, serif; 
+                font-weight: normal; 
+                text-decoration: none; 
+                font-style: normal; 
+                font-variant: normal; 
+                text-transform: none; 
+                background:#801A99;  
+                border: #801A99; 
+                display: inline-block;
                 position: relative;
-                left: 200px;
-                top: 50px; 
+                left: 220px;
+                top: 60px; 
                }
-                  
+     .Trends30d:hover {
+                       background:grey; 
+                      }
+     .Trends30d:active {
+                        background:#FF00FF; 
+                       }   
+     .Module1{
+               background-color: #D3D3D3;
+               border-radius: 14px;
+               width: 1250px;
+               height: 200px;
+               margin:auto;
+             }   
+     .Module2{
+               background-color: #D3D3D3;
+               border-radius: 14px;
+               width: 1250px;
+               height: 200px;
+               margin: auto;
+             } 
+     .reset{
+            color: #FF33FF; 
+            font-size: 28px; 
+            line-height: 30px; 
+            border-radius: 6px; 
+            font-family: Georgia, serif; 
+            font-weight: normal; 
+            text-decoration: none; 
+            font-style: normal; 
+            font-variant: normal; 
+            text-transform: none; 
+            background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+            box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+            border: 2px solid rgb(28, 110, 164); 
+            display: inline-block;
+            position: relative;
+            left: 260px;
+            bottom: 75px;
+           }
+     .reset:hover {
+                       background:grey; 
+                      }
+     .reset:active {
+                        background:#FF2A00; 
+                       }  
+     .From2{
+             position: relative;
+             left: 560px;
+             bottom: 34px;
+           }
+     .To2{
+          position: relative;
+          left: 920px;
+          bottom: 85.5px;
+         }
 
-
-
-
-     
-     /*                .box {
-           width: 350px;
-           inline-size: 350px;
-           height: 150px;
-           block-size: 150px;
-           margin: 10px;
-           padding: 25px;
-           border: 5px solid black;
-          }
-     */
-     /* position: relative;
-        left: 116px;
-        bottom: 17px;
-         border-radius: 6px; 
-                

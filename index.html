@@ -8,27 +8,50 @@
      <body>
         <main>
             <div class="title">
-                <h1 class="title">Smart Currency Converter</h1>
+                <h1 class="title"><span>Smart</span>Currency Converter</h1>
             </div>
-            <div class="Amount1">
-                <p class="Amount1">Amount</p>
+            <div class="Module1">
+               <div class="Amount1">
+                  <p class="Amount1">Amount</p>
+               </div>
+               <div class="Amount2">
+                  <label for="Amount2"></label>
+                  <input id="Amount2" type="text" placeholder="">
+               </div>
+               <div class="From">
+                  <label for="From">From</label>
+               </div>
+               <div class="From2">
+                <select id="From">
+                    <option value="">--Please choose an option--</option>
+                    <option value="USD">USD (US Dollars)</option>
+                    <option value="CNY">CNY (Chinese Yuan)</option>
+                    <option value="JPY">JPY (Japanese Yen)</option>
+                    <option value="CAD">CAD (Canadian Dollars)</option>
+                    <option value="EUR">EUR (European Euro)</option>
+                 </select>
+               </div>
+               <div class="To">
+                  <label for="To">To</label>
+               </div>
+               <div class="To2">
+                 <select id="To">
+                    <option value="">--Please choose an option--</option>
+                    <option value="USD">USD (US Dollars)</option>
+                    <option value="CNY">CNY (Chinese Yuan)</option>
+                    <option value="JPY">JPY (Japanese Yen)</option>
+                    <option value="CAD">CAD (Canadian Dollars)</option>
+                    <option value="EUR">EUR (European Euro)</option>
+                 </select>
+              </div>
+              <button class="Convert">Convert</button>
+              <button class="reset">Reset</button>
             </div>
-            <div class="Amount2">
-                <label for="Amount2"></label>
-                <input id="Amount2" type="text" placeholder="">
+            <div class="Module2">
+              <h2 class="trends">Trends:</h2>
+              <button class="Trends7d">View 7 Days</button>
+              <button class="Trends30d">View 30 Days</button>
             </div>
-            <div class="From">
-                <label for="From">From</label>
-            </div>
-            <div class="To">
-                <label for="To">To</label>
-            </div>
-            <button class="Convert">Convert</button>
-            <div class="trends">
-                <h2 class="trends">Trends:</h2>
-            </div>
-            <button class="Trends7d">View 7 Days</button>
-            <button class="Trends30d">View 30 Days</button>
         </main>
     </body>
 </html>    
