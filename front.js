@@ -51,7 +51,7 @@ const errorMessageElement = document.getElementById("errorMessage");
 target.addEventListener("change", displayImage);
 base.addEventListener("change", displayImage);
 btn1.addEventListener('click',function(){  
-                                          //!!!!!convert amount 不确定
+                                          //convert amount
                                           const amo = document.getElementById("Amount2");
                                           const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
                                           xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo}`);
