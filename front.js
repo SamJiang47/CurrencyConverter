@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,36 @@ function displayImage() {
 
 
 
+=======
+const target = document.getElementsById('To');
+const base = document.getElementsById('From');
+const btn1 = document.getElementsByClassName("Convert");
+const imageElement1 = document.getElementById("USD");
+const imageElement2 = document.getElementById("CNY");
+const imageElement3 = document.getElementById("JPY");
+const imageElement4 = document.getElementById("CAD");
+const imageElement5 = document.getElementById("EUR");
+target.addEventListener("change", displayImage);
+base.addEventListener("change", displayImage);
+const option1 = base.value;
+const option2 = target.value;
+                                                  
+function checkSelections() {
+                            const select1 = document.getElementById("From");
+                            const select2 = document.getElementById("To");
+                            const errorElement1 = document.getElementById("error1");
+                            if (select1.value === select2.value ){
+                                                                  errorElement1.style.display = "block"; 
+                                                                 }
+                            else if (select1.value === "" || select2.value === "" ){
+                                                                                    errorElement1.style.display = "none"; 
+                                                                                   }
+                            else {
+                                  errorElement1.style.display = "none";  
+                                 }
+                           }
+                               
+>>>>>>> 2d83406fd6bb2d95519abd0f3f34eeeec700d076
 function formatNumberInput(event) {
   const input = event.target;
   let value = input.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
@@ -41,6 +72,7 @@ function isNumberKey(event) {
 }
 
 function resetInput() {
+<<<<<<< HEAD
   document.getElementById("Amount2").value = ""; //Reset function for type in texts
   document.getElementById("From").value = ""; //Reset function for From
   document.getElementById("To").value = ""; //Reset function for To
@@ -75,6 +107,34 @@ btn1.addEventListener('click',function(){
   }
 })
 
+=======
+                        document.getElementById("Amount2").value = ""; //Reset function for type in texts
+                        document.getElementById("From").value = ""; //Reset function for From
+                        document.getElementById("To").value = ""; //Reset function for To
+                      }
+btn1.addEventListener('click',function(){  
+                                          if (select1.value === select2.value && select1.value === "" || select2.value === ""){
+                                                                                                                               btn1.preventDefault();
+                                                                                                                              }
+                                          //!!!!!convert amount 不确定
+                                          const amo = document.getElementById("Amount2");
+                                          const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
+                                          xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo}`);
+                                          xhr1.send(); 
+                                          xhr1.onload = function(){ //Once we get response
+                                                                   const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+                                                                     //Example output: body = {"result":706};
+                                                                     //!!!!!!Display output(Not sure)
+                                                                     // Change elementbyID
+
+                                                                     document.getElementById('result1').innerHTML = `${amo} ${base} = ${body.result} ${target}`;
+                                                                     const result1 = {
+                                                                                       "Module1Result": `${amo} ${base} = ${body.result} ${target}`
+                                                                                     };
+                                                                     console.log(result1.Module1Result);
+                                                                   }
+                                        })
+>>>>>>> 2d83406fd6bb2d95519abd0f3f34eeeec700d076
 const btn7 = document.getElementsByClassName("Trends7d");
 btn7.addEventListener('click',function(){
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object

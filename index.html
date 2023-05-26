@@ -22,7 +22,7 @@
                   <label for="From">From</label>
                </div>
                <div class="From2">
-                 <select id="From">
+                 <select id="From" onchange="checkSelections()">
                     <option value="">--Please choose an option--</option>
                     <option value="USD">USD (US Dollars)</option>
                     <option value="CNY">CNY (Chinese Yuan)</option>
@@ -36,7 +36,7 @@
                   <label for="To">To</label>
                </div>
                <div class="To2">
-                 <select id="To">
+                 <select id="To" onchange="checkSelections()" >
                     <option value="">--Please choose an option--</option>
                     <option value="USD">USD (US Dollars)</option>
                     <option value="CNY">CNY (Chinese Yuan)</option>
@@ -57,14 +57,21 @@
             <div class="circle"></div>
             <img class="Arrow" src="Arrow.png" alt="From To Arrow">
             <div id="images">
-               <img src="USA30x30.png" id="USD" style="display: none;">
-               <img src="China30x30.png" id="CNY" style="display: none;">
-               <img src="Japan30x30.png" id="JPY" style="display: none;">
-               <img src="Canada30x30.png" id="CAD" style="display: none;">
-               <img src="Europe30x30.png" id="EUR" style="display: none;">
+               <img src="USA30x30.png" id="USD" style="display: none;" alt="US Flag">
+               <img src="China30x30.png" id="CNY" style="display: none;" alt="China Flag">
+               <img src="Japan30x30.png" id="JPY" style="display: none;" alt="Japan Flag">
+               <img src="Canada30x30.png" id="CAD" style="display: none;" alt="Canada Flag">
+               <img src="Europe30x30.png" id="EUR" style="display: none;" alt="Europe Flag">
              </div>
+             <div class="error1">
+               <p id="error1">Selections cannot be the same!!</p>
+             </div>
+             <div class="result1">
+               <p id="result1"></p>
+             </div>
+
+
             <script src="front.js"></script>
-            <p id="errorMessage" style="display: none; color: red;">Error: Selections cannot be the same!!</p>
         </main>
     </body>
 </html>    
