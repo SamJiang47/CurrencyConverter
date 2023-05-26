@@ -16,7 +16,7 @@
                </div>
                <div class="Amount2">
                   <label for="Amount2"></label>
-                  <input id="Amount2" type="text" placeholder="" oninput="validateNumberInput(event)">
+                  <input id="Amount2" type="text" placeholder="" oninput="formatNumberInput(event)" onkeypress="return isNumberKey(event)">
                </div>
                <div class="From">
                   <label for="From">From</label>
@@ -30,6 +30,7 @@
                     <option value="CAD">CAD (Canadian Dollars)</option>
                     <option value="EUR">EUR (European Euro)</option>
                  </select>
+                </div>
                </div>
                <div class="To">
                   <label for="To">To</label>
@@ -45,7 +46,7 @@
                  </select>
               </div>
               <button class="Convert">Convert</button>
-              <button class="reset">Reset</button>
+              <button class="reset" onclick="resetInput()">Reset</button>
             </div>
             <div class="Module2">
               <h2 class="trends">Trends:</h2>
@@ -54,6 +55,15 @@
             </div>
             <div class="circle"></div>
             <img class="Arrow" src="Arrow.png" alt="From To Arrow">
+            <div id="images">
+               <img src="USA30x30.png" id="USD" style="display: none;">
+               <img src="China30x30.png" id="CNY" style="display: none;">
+               <img src="Japan30x30.png" id="JPY" style="display: none;">
+               <img src="Canada30x30.png" id="CAD" style="display: none;">
+               <img src="Europe30x30.png" id="EUR" style="display: none;">
+             </div>
+            <script src="front.js"></script>
+            <p id="errorMessage" style="display: none; color: red;">Error: Selections cannot be the same!!</p>
         </main>
     </body>
 </html>    
