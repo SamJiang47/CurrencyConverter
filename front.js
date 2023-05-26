@@ -55,9 +55,9 @@ function resetInput() {
                         document.getElementById("To").value = ""; //Reset function for To
                       }
 btn1.addEventListener('click',function(){  
-                                          if (errorElement1.style.display = "block"){
-                                                                                     btn1.preventDefault();
-                                                                                    }
+                                          if (select1.value === select2.value && select1.value === "" || select2.value === ""){
+                                                                                                                               btn1.preventDefault();
+                                                                                                                              }
                                           //!!!!!convert amount 不确定
                                           const amo = document.getElementById("Amount2");
                                           const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
