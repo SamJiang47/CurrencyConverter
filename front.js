@@ -1,20 +1,31 @@
-
-
-
-function displayImage() {
-                         const option1 = option1Select.value;
-                         const option2 = option2Select.value;
-                         if (option1 === option2) {
-                                                   errorMessageElement.style.display = "block";
-                                                   imageElement.style.display = "none";
-                                                  } else {
-                                                          errorMessageElement.style.display = "none";
-                                                          imageElement.style.display = "block";
-                                                         }
-                        }
-
-
-
+const target = document.getElementsById('To');
+const base = document.getElementsById('From');
+const btn1 = document.getElementsByClassName("Convert");
+const imageElement1 = document.getElementById("USD");
+const imageElement2 = document.getElementById("CNY");
+const imageElement3 = document.getElementById("JPY");
+const imageElement4 = document.getElementById("CAD");
+const imageElement5 = document.getElementById("EUR");
+target.addEventListener("change", displayImage);
+base.addEventListener("change", displayImage);
+const option1 = base.value;
+const option2 = target.value;
+                                                  
+function checkSelections() {
+                            const select1 = document.getElementById("From");
+                            const select2 = document.getElementById("To");
+                            const errorElement1 = document.getElementById("error1");
+                            if (select1.value === select2.value ){
+                                                                  errorElement1.style.display = "block"; 
+                                                                 }
+                            else if (select1.value === "" || select2.value === "" ){
+                                                                                    errorElement1.style.display = "none"; 
+                                                                                   }
+                            else {
+                                  errorElement1.style.display = "none";  
+                                 }
+                           }
+                               
 function formatNumberInput(event) {
                                    const input = event.target;
                                    let value = input.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
@@ -43,14 +54,10 @@ function resetInput() {
                         document.getElementById("From").value = ""; //Reset function for From
                         document.getElementById("To").value = ""; //Reset function for To
                       }
-const target = document.getElementsById('To');
-const base = document.getElementsById('From');
-const btn1 = document.getElementsByClassName("Convert");
-const imageElement = document.getElementById("image");
-const errorMessageElement = document.getElementById("errorMessage");
-target.addEventListener("change", displayImage);
-base.addEventListener("change", displayImage);
 btn1.addEventListener('click',function(){  
+                                          if (errorElement1.style.display = "block"){
+                                                                                     btn1.preventDefault();
+                                                                                    }
                                           //!!!!!convert amount 不确定
                                           const amo = document.getElementById("Amount2");
                                           const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
@@ -61,17 +68,13 @@ btn1.addEventListener('click',function(){
                                                                      //Example output: body = {"result":706};
                                                                      //!!!!!!Display output(Not sure)
                                                                      // Change elementbyID
-                                                                     document.getElementById('result').innerHTML = `${amo} ${base} = ${body.result} ${target}`;
+
+                                                                     document.getElementById('result1').innerHTML = `${amo} ${base} = ${body.result} ${target}`;
+                                                                     const result1 = {
+                                                                                       "Module1Result": `${amo} ${base} = ${body.result} ${target}`
+                                                                                     };
+                                                                     console.log(result1.Module1Result);
                                                                    }
-                                          const selection1 = target.value;
-                                          const selection2 = base.value;
-                                          if (selection1 === selection2) {
-                                                                          errorMessageElement.style.display = "block";
-                                                                          imageElement.style.display = "none";
-                                                                         } else {
-                                                                                 errorMessageElement.style.display = "none";
-                                                                                 imageElement.style.display = "block";
-                                                                                }
                                         })
 const btn7 = document.getElementsByClassName("Trends7d");
 btn7.addEventListener('click',function(){

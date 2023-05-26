@@ -201,4 +201,19 @@ html{
              left: 958px;
              bottom: 530px;
            }
+     .error1{
+            position: relative;
+            left: 870px;
+            bottom: 520px;
+            font-size: 20px;
+            color: red;
+          }
+
+
+    /*.USD{
+         position: relative;
+         left: 560px;
+         bottom: 308px;
+        }
+    
 
