@@ -37,12 +37,12 @@ html{
              color: black;
              display: flex;
              position: relative;
-             left: 121px;
+             left: 71px;
              top: 15px;
             }
     .Amount2{
              position: relative;
-             left: 240px;
+             left: 140px;
              top: 18px;
             }
     .From{
@@ -51,8 +51,8 @@ html{
           color: black;
           display: flex;
           position: relative;
-          left: 560px;
-          bottom: 45px;
+          left: 406px;
+          bottom: 44px;
          }
     .To{
         font-family: "Arial Black", Gadget, sans-serif;
@@ -60,8 +60,8 @@ html{
         color: black;
         display: flex;
         position: relative;
-        left: 920px;
-        bottom: 97px;
+        left: 1050px;
+        bottom: 147.8px;
        }
      .Convert{
                color: rgb(255, 255, 255); 
@@ -79,8 +79,8 @@ html{
                border: 2px solid rgb(28, 110, 164); 
                display: inline-block;
                position: relative;
-               left: 240px;
-               bottom: 75px;
+               left: 465px;
+               bottom: 125px;
              }
      .Convert:hover {
                      background:#99FFFF; 
@@ -166,8 +166,8 @@ html{
             border: 2px solid rgb(28, 110, 164); 
             display: inline-block;
             position: relative;
-            left: 260px;
-            bottom: 75px;
+            left: 470px;
+            bottom: 125px;
            }
      .reset:hover {
                        background:grey; 
@@ -177,13 +177,13 @@ html{
                        }  
      .From2{
              position: relative;
-             left: 560px;
+             left: 407px;
              bottom: 34px;
            }
      .To2{
           position: relative;
-          left: 920px;
-          bottom: 85.5px;
+          left: 1050px;
+          bottom: 137.9px;
          }
      .circle {
               width: 90px;
@@ -191,14 +191,14 @@ html{
               border-radius: 50%;
               background-color: white;
               position: relative;
-              left: 1121px;
-              bottom: 380px;
+              left: 945px;
+              bottom: 458px;
              }
      .Arrow{
              width: 66.67px;
              height: 50.78px;
              position: relative;
-             left: 1134px;
-             bottom: 450px;
+             left: 958px;
+             bottom: 530px;
            }
 
