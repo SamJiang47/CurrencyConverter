@@ -124,8 +124,8 @@ btn7[i].addEventListener('click',function(){
   console.log(`Target: ${target}`);
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
-  xhr1.send(); 
-    xhr1.onload = function(){ //Once we get response
+  xhr2.send(); 
+    xhr2.onload = function(){ //Once we get response
       const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
       const data = PlotG(body);
     }
@@ -138,10 +138,10 @@ for (let i = 0; i < btn3.length; i++) {
 btn3[i].addEventListener('click',function(){
   const target = document.getElementById('To').value;
   const base = document.getElementById('From').value;
-  const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr2.open('GET',`http://localhost:3000/30day/${base}/${target}`);
-  xhr1.send(); 
-    xhr1.onload = function(){ //Once we get response
+  const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
+  xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
+  xhr3.send(); 
+    xhr3.onload = function(){ //Once we get response
       const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
       const data = PlotG(body);
     }
