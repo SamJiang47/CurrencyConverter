@@ -126,7 +126,7 @@ btn7[i].addEventListener('click',function(){
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
   xhr2.send(); 
     xhr2.onload = function(){ //Once we get response
-      const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+      const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
       const data = PlotG(body);
     }
   })
@@ -142,7 +142,7 @@ btn3[i].addEventListener('click',function(){
   xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
   xhr3.send(); 
     xhr3.onload = function(){ //Once we get response
-      const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+      const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format
       const data = PlotG(body);
     }
   })
