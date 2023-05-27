@@ -103,6 +103,8 @@ const btn1 = document.getElementsByClassName("Convert");
 for (let i = 0; i < btn1.length; i++) {
   btn1[i].addEventListener('click',function(){  
   //convert amount
+    const target = document.getElementById('To').value;
+    const base = document.getElementById('From').value;
     const amo = document.getElementById("Amount2");
     const amo1= amo.value;
     const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
@@ -110,7 +112,7 @@ for (let i = 0; i < btn1.length; i++) {
     xhr1.send(); 
     xhr1.onload = function(){ //Once we get response
       const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
-      document.getElementById('result').innerHTML = `${amo1} ${base} = ${body.result} ${target}`;
+      document.getElementById('result').innerHTML = ` ${body.result}`;
     }
   })
  }
