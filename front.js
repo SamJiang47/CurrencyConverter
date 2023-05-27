@@ -4,17 +4,20 @@ const btn1 = document.getElementsByClassName("Convert");
 const imageElement = document.getElementById("image");
 const errorMessageElement = document.getElementById("errorMessage");
 
-function displayImage() {
-  const option1 = option1Select.value;
-  const option2 = option2Select.value;
-  if (option1 === option2) {
-    errorMessageElement.style.display = "block";
-    imageElement.style.display = "none";
-  } else {
-    errorMessageElement.style.display = "none";
-    imageElement.style.display = "block";
+function checkSelections() {
+  const select1 = document.getElementById("From");
+  const select2 = document.getElementById("To");
+  const errorElement1 = document.getElementById("error1");
+  if (select1.value === select2.value ){
+  errorElement1.style.display = "block"; 
   }
-}
+  else if (select1.value === "" || select2.value === "" ){
+  errorElement1.style.display = "none"; 
+  }
+  else {
+  errorElement1.style.display = "none";  
+  }
+} 
 
 function formatNumberInput(event) {
   const input = event.target;
@@ -59,15 +62,6 @@ btn1.addEventListener('click',function(){
   const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
   document.getElementById('result').innerHTML = `${amo} ${base} = ${body.result} ${target}`;
   }
-  const selection1 = target.value;
-  const selection2 = base.value;
-  if (selection1 === selection2) {
-    errorMessageElement.style.display = "block";
-    imageElement.style.display = "none";
-  } else {
-    errorMessageElement.style.display = "none";
-    imageElement.style.display = "block";
-  }
 })
 
 const btn7 = document.getElementsByClassName("Trends7d");
@@ -81,8 +75,8 @@ btn7.addEventListener('click',function(){
   //!!!!!!Display output
   document.getElementById('result').innerHTML = `Temperature:${temp} °F`;
   }
-
 })
+
 const btn3 = document.getElementsByClassName("Trends30d");
 btn3.addEventListener('click',function(){
   const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
