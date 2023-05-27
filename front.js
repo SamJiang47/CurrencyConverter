@@ -120,6 +120,8 @@ for (let i = 0; i < btn7.length; i++) {
 btn7[i].addEventListener('click',function(){
   const target = document.getElementById('To').value;
   const base = document.getElementById('From').value;
+  console.log(`Base: ${base}`);
+  console.log(`Target: ${target}`);
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
   xhr1.send(); 
