@@ -117,30 +117,35 @@ btn1[i].addEventListener('click',function(){
 
 const btn7 = document.getElementsByClassName("Trends7d");
 for (let i = 0; i < btn7.length; i++) {
-btn7.addEventListener('click',function(){
+btn7[i].addEventListener('click',function(){
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
-  xhr2.send(); //Send requent
-  xhr2.onload = function(){ //Once we get response
-  const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
+  xhr2.onreadystatechange = function() {
+  if (xhr2.readyState === XMLHttpRequest.DONE && xhr2.status === 200) { //Once we get response
+  const body = JSON.parse(xhr2.responseText);  //Transfer from JSON format
   //!!!!!!Generate a chart
   const data = PlotG(body);
+      }
   //!!!!!!Display output
+     };
+     xhr2.send();
+    });
    }
-  })
- }
+ 
 
 const btn3 = document.getElementsByClassName("Trends30d");
 for (let i = 0; i < btn3.length; i++) {
-btn3.addEventListener('click',function(){
+btn3[i].addEventListener('click',function(){
   const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
   xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
-  xhr3.send(); //Send requent
-  xhr3.onload = function(){ //Once we get response
+  xhr3.onreadystatechange = function() {
+  if (xhr3.readyState === XMLHttpRequest.DONE && xhr3.status === 200) {
   const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format   
   //!!!!!!Generate a chart 
   const data = PlotG(body);
   //!!!!!!Display output
-   }
-  })
+    }
+   };
+   xhr3.send();
+  });
  }
