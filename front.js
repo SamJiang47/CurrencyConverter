@@ -1,6 +1,6 @@
 const errorMessageElement = document.getElementById("errorMessage");
 
-function PlotG(body) {
+function changeFormat(body) {
   const xyValues = [];
   const result = body.result;
   const dates = Object.keys(result);
@@ -9,46 +9,7 @@ function PlotG(body) {
       const y = result[date][Object.keys(result[date])[0]]; // or use  if currency type is dynamic
       xyValues.push({ x: date, y }); // retain date string as x value
   }
-  let yValues = xyValues.map(obj => obj.y);
-  let minValue = Math.min(...yValues);
-  let maxValue = Math.max(...yValues);
-
-  new Chart("myChart", {
-    type: "scatter",
-    data: {
-      datasets: [{
-        pointRadius: 4,
-        pointBackgroundColor: "rgb(0,0,255)",
-        data: xyValues
-      }]
-    },
-    options: {
-      legend: {display: false},
-      scales: {
-        xAxes: [{
-          type: 'time',
-          time: {
-            parser: 'YYYY-MM-DD',
-            unit: 'day'
-          },
-          scaleLabel: {
-            display: true,
-            labelString: 'Date'
-          }
-        }],
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Currency Rate (CNY)'
-          },
-          ticks: {
-            suggestedMin: minValue,
-            suggestedMax: maxValue
-          }
-        }]
-      }
-    }
-  });
+  return xyValues;
 }
 
 function checkSelections() {
@@ -115,35 +76,111 @@ for (let i = 0; i < btn1.length; i++) {
   })
  }
 
-const btn7 = document.getElementsByClassName("Trends7d");
-for (let i = 0; i < btn7.length; i++) {
-btn7[i].addEventListener('click',function(){
-  const target = document.getElementById('To').value;
-  const base = document.getElementById('From').value;
-  console.log(`Base: ${base}`);
-  console.log(`Target: ${target}`);
-  const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
-  xhr2.send(); 
-    xhr2.onload = function(){ //Once we get response
-      const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
-      const data = PlotG(body);
-    }
-  })
- }
+ const btn7 = document.getElementsByClassName("Trends7d");
+ for (let i = 0; i < btn7.length; i++) {
+     btn7[i].addEventListener('click', function () {
+         const target = document.getElementById('To').value;
+         const base = document.getElementById('From').value;
+         console.log(`Base: ${base}`);
+         console.log(`Target: ${target}`);
+         const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
+         xhr2.open('GET', `http://localhost:3000/7day/${base}/${target}`);
+         xhr2.send();
+         xhr2.onload = function () { //Once we get response
+             const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
+             const xyValues = changeFormat(body);
+             let yValues = xyValues.map(obj => obj.y);
+             let minValue = Math.min(...yValues);
+             let maxValue = Math.max(...yValues);
+             new Chart("myChart", {
+                 type: "scatter",
+                 data: {
+                     datasets: [{
+                         label: 'Currency over Time',
+                         pointRadius: 4,
+                         pointBackgroundColor: "rgba(0,0,255,1)",
+                         data: xyValues
+                     }]
+                 },
+                 options: {
+                     scales: {
+                         x: {
+                             type: 'time',
+                             time: {
+                                 unit: 'day',
+                                 displayFormats: {
+                                     day: 'MMM DD'
+                                 },
+                                 tooltipFormat: 'll'
+                             },
+                             title: {
+                                 display: true,
+                                 text: 'Date'
+                             }
+                         },
+                         y: {
+                             title: {
+                                 display: true,
+                                 text: 'Currency Rate'
+                             }
+                         }
+                     }
+                 }
+             });
+         }
+     })  // Close 'addEventListener' function here
+ } 
  
-
-const btn3 = document.getElementsByClassName("Trends30d");
-for (let i = 0; i < btn3.length; i++) {
-btn3[i].addEventListener('click',function(){
-  const target = document.getElementById('To').value;
-  const base = document.getElementById('From').value;
-  const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
-  xhr3.send(); 
-    xhr3.onload = function(){ //Once we get response
-      const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format
-      const data = PlotG(body);
-    }
-  })
- }
+ const btn3 = document.getElementsByClassName("Trends30d");
+ for (let i = 0; i < btn3.length; i++) {
+     btn3[i].addEventListener('click', function () {
+         const target = document.getElementById('To').value;
+         const base = document.getElementById('From').value;
+         const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
+         xhr3.open('GET', `http://localhost:3000/30day/${base}/${target}`);
+         xhr3.send();
+         xhr3.onload = function () { //Once we get response
+             const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format
+             const xyValues = changeFormat(body);
+             let yValues = xyValues.map(obj => obj.y);
+             let minValue = Math.min(...yValues);
+             let maxValue = Math.max(...yValues);
+             new Chart("myChart", {
+                 type: "scatter",
+                 data: {
+                     datasets: [{
+                         label: 'Currency over Time',
+                         pointRadius: 4,
+                         pointBackgroundColor: "rgba(0,0,255,1)",
+                         data: xyValues
+                     }]
+                 },
+                 options: {
+                     scales: {
+                         x: {
+                             type: 'time',
+                             time: {
+                                 unit: 'day',
+                                 displayFormats: {
+                                     day: 'MMM DD'
+                                 },
+                                 tooltipFormat: 'll'
+                             },
+                             title: {
+                                 display: true,
+                                 text: 'Date'
+                             }
+                         },
+                         y: {
+                             title: {
+                                 display: true,
+                                 text: 'Currency Rate'
+                             }
+                         }
+                     }
+                 }
+             });
+         } // close the onload function here
+     }); // close the addEventListener function here
+ } // close the for loop here
+ 
