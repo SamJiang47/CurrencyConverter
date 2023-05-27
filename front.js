@@ -1,5 +1,5 @@
-const target = document.getElementById('To');
-const base = document.getElementById('From');
+const target = document.getElementById('To').value;
+const base = document.getElementById('From').value;
 const errorMessageElement = document.getElementById("errorMessage");
 
 function PlotG(body) {
@@ -101,17 +101,17 @@ function resetInput() {
 
 const btn1 = document.getElementsByClassName("Convert");
 for (let i = 0; i < btn1.length; i++) {
-btn1[i].addEventListener('click',function(){  
+  btn1[i].addEventListener('click',function(){  
   //convert amount
-  const amo = document.getElementById("Amount2");
-  const amo1= amo.value;
-  const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo1}`);
-  xhr1.send(); 
-  xhr1.onload = function(){ //Once we get response
-  const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
-  document.getElementById('result').innerHTML = `${amo1} ${base} = ${body.result} ${target}`;
-   }
+    const amo = document.getElementById("Amount2");
+    const amo1= amo.value;
+    const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
+    xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo1}`);
+    xhr1.send(); 
+    xhr1.onload = function(){ //Once we get response
+      const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+      document.getElementById('result').innerHTML = `${amo1} ${base} = ${body.result} ${target}`;
+    }
   })
  }
 
