@@ -71,7 +71,7 @@ for (let i = 0; i < btn1.length; i++) {
     xhr1.send(); 
     xhr1.onload = function(){ //Once we get response
       const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
-      document.getElementById('result').innerHTML = ` ${body.result}`;
+      document.getElementById('result').innerHTML = `${amo1}${base}=${body.result}${target}`;
     }
   })
  }
