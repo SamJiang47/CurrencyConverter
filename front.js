@@ -1,7 +1,5 @@
-const target = document.getElementsById('To');
-const base = document.getElementsById('From');
-const btn1 = document.getElementsByClassName("Convert");
-const imageElement = document.getElementById("image");
+const target = document.getElementById('To');
+const base = document.getElementById('From');
 const errorMessageElement = document.getElementById("errorMessage");
 
 function PlotG(body) {
@@ -101,19 +99,24 @@ function resetInput() {
   document.getElementById("To").value = ""; //Reset function for To
 }
 
-btn1.addEventListener('click',function(){  
+const btn1 = document.getElementsByClassName("Convert");
+for (let i = 0; i < btn1.length; i++) {
+btn1[i].addEventListener('click',function(){  
   //convert amount
   const amo = document.getElementById("Amount2");
+  const amo1= amo.value;
   const xhr1 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo}`);
+  xhr1.open('GET',`http://localhost:3000/con/${base}/${target}/${amo1}`);
   xhr1.send(); 
   xhr1.onload = function(){ //Once we get response
   const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
-  document.getElementById('result').innerHTML = `${amo} ${base} = ${body.result} ${target}`;
-  }
-})
+  document.getElementById('result').innerHTML = `${amo1} ${base} = ${body.result} ${target}`;
+   }
+  })
+ }
 
 const btn7 = document.getElementsByClassName("Trends7d");
+for (let i = 0; i < btn7.length; i++) {
 btn7.addEventListener('click',function(){
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
@@ -123,10 +126,12 @@ btn7.addEventListener('click',function(){
   //!!!!!!Generate a chart
   const data = PlotG(body);
   //!!!!!!Display output
-  }
-})
+   }
+  })
+ }
 
 const btn3 = document.getElementsByClassName("Trends30d");
+for (let i = 0; i < btn3.length; i++) {
 btn3.addEventListener('click',function(){
   const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
   xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
@@ -136,5 +141,6 @@ btn3.addEventListener('click',function(){
   //!!!!!!Generate a chart 
   const data = PlotG(body);
   //!!!!!!Display output
-  }
-})
+   }
+  })
+ }
