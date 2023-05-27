@@ -4,6 +4,57 @@ const btn1 = document.getElementsByClassName("Convert");
 const imageElement = document.getElementById("image");
 const errorMessageElement = document.getElementById("errorMessage");
 
+function PlotG(body) {
+  const xyValues = [];
+  const result = body.result;
+  const dates = Object.keys(result);
+
+  for (let date of dates) {
+      const y = result[date][Object.keys(result[date])[0]]; // or use  if currency type is dynamic
+      xyValues.push({ x: date, y }); // retain date string as x value
+  }
+  let yValues = xyValues.map(obj => obj.y);
+  let minValue = Math.min(...yValues);
+  let maxValue = Math.max(...yValues);
+
+  new Chart("myChart", {
+    type: "scatter",
+    data: {
+      datasets: [{
+        pointRadius: 4,
+        pointBackgroundColor: "rgb(0,0,255)",
+        data: xyValues
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        xAxes: [{
+          type: 'time',
+          time: {
+            parser: 'YYYY-MM-DD',
+            unit: 'day'
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Date'
+          }
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Currency Rate (CNY)'
+          },
+          ticks: {
+            suggestedMin: minValue,
+            suggestedMax: maxValue
+          }
+        }]
+      }
+    }
+  });
+}
+
 function checkSelections() {
   const select1 = document.getElementById("From");
   const select2 = document.getElementById("To");
@@ -50,8 +101,6 @@ function resetInput() {
   document.getElementById("To").value = ""; //Reset function for To
 }
 
-target.addEventListener("change", displayImage);
-base.addEventListener("change", displayImage);
 btn1.addEventListener('click',function(){  
   //convert amount
   const amo = document.getElementById("Amount2");
@@ -72,8 +121,8 @@ btn7.addEventListener('click',function(){
   xhr2.onload = function(){ //Once we get response
   const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
   //!!!!!!Generate a chart
+  const data = PlotG(body);
   //!!!!!!Display output
-  document.getElementById('result').innerHTML = `Temperature:${temp} °F`;
   }
 })
 
@@ -85,7 +134,7 @@ btn3.addEventListener('click',function(){
   xhr3.onload = function(){ //Once we get response
   const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format   
   //!!!!!!Generate a chart 
+  const data = PlotG(body);
   //!!!!!!Display output
-  document.getElementById('result').innerHTML = `Temperature:${temp} °F`;
   }
 })

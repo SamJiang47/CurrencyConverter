@@ -4,6 +4,8 @@
            <title>CurrencyConverter</title>
            <meta name="description" content="Converter">
            <link rel="stylesheet" href="style.css"/>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
      </head>
        <body>
         <main>
@@ -69,9 +71,8 @@
              <div class="result1">
                <p id="result1"></p>
              </div>
-
-
-            <script src="front.js"></script>
+             <canvas id="Chart" style="width:100%;max-width:700px"></canvas>
+             <script src="front.js"></script>
         </main>
     </body>
 </html>    
