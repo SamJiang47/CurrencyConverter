@@ -1,5 +1,3 @@
-const target = document.getElementById('To').value;
-const base = document.getElementById('From').value;
 const errorMessageElement = document.getElementById("errorMessage");
 
 function PlotG(body) {
@@ -120,34 +118,30 @@ for (let i = 0; i < btn1.length; i++) {
 const btn7 = document.getElementsByClassName("Trends7d");
 for (let i = 0; i < btn7.length; i++) {
 btn7[i].addEventListener('click',function(){
+  const target = document.getElementById('To').value;
+  const base = document.getElementById('From').value;
   const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
   xhr2.open('GET',`http://localhost:3000/7day/${base}/${target}`);
-  xhr2.onreadystatechange = function() {
-  if (xhr2.readyState === XMLHttpRequest.DONE && xhr2.status === 200) { //Once we get response
-  const body = JSON.parse(xhr2.responseText);  //Transfer from JSON format
-  //!!!!!!Generate a chart
-  const data = PlotG(body);
-      }
-  //!!!!!!Display output
-     };
-     xhr2.send();
-    });
-   }
+  xhr1.send(); 
+    xhr1.onload = function(){ //Once we get response
+      const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+      const data = PlotG(body);
+    }
+  })
+ }
  
 
 const btn3 = document.getElementsByClassName("Trends30d");
 for (let i = 0; i < btn3.length; i++) {
 btn3[i].addEventListener('click',function(){
-  const xhr3 = new XMLHttpRequest(); //Define XMLhttp object
-  xhr3.open('GET',`http://localhost:3000/30day/${base}/${target}`);
-  xhr3.onreadystatechange = function() {
-  if (xhr3.readyState === XMLHttpRequest.DONE && xhr3.status === 200) {
-  const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format   
-  //!!!!!!Generate a chart 
-  const data = PlotG(body);
-  //!!!!!!Display output
+  const target = document.getElementById('To').value;
+  const base = document.getElementById('From').value;
+  const xhr2 = new XMLHttpRequest(); //Define XMLhttp object
+  xhr2.open('GET',`http://localhost:3000/30day/${base}/${target}`);
+  xhr1.send(); 
+    xhr1.onload = function(){ //Once we get response
+      const body = JSON.parse(xhr1.responseText)  //Transfer from JSON format
+      const data = PlotG(body);
     }
-   };
-   xhr3.send();
-  });
+  })
  }
