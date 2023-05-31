@@ -1,4 +1,4 @@
-import { Chart } from 'chart.js';
+
 
 const errorMessageElement = document.getElementById("errorMessage");
 
