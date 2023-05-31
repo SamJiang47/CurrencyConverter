@@ -6,7 +6,7 @@ function changeFormat(body) {
   const dates = Object.keys(result);
 
   for (let date of dates) {
-      const y = result[date][Object.keys(result[date])[0]]; // or use  if currency type is dynamic
+      const y = result[date][Object.keys(result[date])[0]];
       xyValues.push({ x: date, y }); // retain date string as x value
   }
   return xyValues;
@@ -89,6 +89,7 @@ for (let i = 0; i < btn1.length; i++) {
          xhr2.onload = function () { //Once we get response
              const body = JSON.parse(xhr2.responseText)  //Transfer from JSON format
              const xyValues = changeFormat(body);
+             console.log(xyValues);
              let yValues = xyValues.map(obj => obj.y);
              let minValue = Math.min(...yValues);
              let maxValue = Math.max(...yValues);
@@ -142,6 +143,7 @@ for (let i = 0; i < btn1.length; i++) {
          xhr3.onload = function () { //Once we get response
              const body = JSON.parse(xhr3.responseText)  //Transfer from JSON format
              const xyValues = changeFormat(body);
+             console.log(xyValues);
              let yValues = xyValues.map(obj => obj.y);
              let minValue = Math.min(...yValues);
              let maxValue = Math.max(...yValues);
