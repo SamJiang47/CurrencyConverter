@@ -1,5 +1,4 @@
 
-
 const errorMessageElement = document.getElementById("errorMessage");
 
 function changeFormat(body) {
