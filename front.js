@@ -1,3 +1,5 @@
+import { Chart } from 'chart.js';
+
 const errorMessageElement = document.getElementById("errorMessage");
 
 function changeFormat(body) {
@@ -93,45 +95,47 @@ for (let i = 0; i < btn1.length; i++) {
              let yValues = xyValues.map(obj => obj.y);
              let minValue = Math.min(...yValues);
              let maxValue = Math.max(...yValues);
+           
              new Chart("myChart", {
-                 type: "scatter",
-                 data: {
-                     datasets: [{
-                         label: 'Currency over Time',
-                         pointRadius: 4,
-                         pointBackgroundColor: "rgba(0,0,255,1)",
-                         data: xyValues
-                     }]
-                 },
-                 options: {
-                     scales: {
-                         x: {
-                             type: 'time',
-                             time: {
-                                 unit: 'day',
-                                 displayFormats: {
-                                     day: 'MMM DD'
-                                 },
-                                 tooltipFormat: 'll'
-                             },
-                             title: {
-                                 display: true,
-                                 text: 'Date'
-                             }
-                         },
-                         y: {
-                             title: {
-                                 display: true,
-                                 text: 'Currency Rate'
-                             }
-                         }
-                     }
-                 }
-             });
-         }
-     })  // Close 'addEventListener' function here
- } 
- 
+                type: "scatter",
+                data: {
+                    datasets: [{
+                    pointRadius: 4,
+                    pointBackgroundColor: "rgb(0,0,255)",
+                    data: xyValues
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                        parser: 'YYYY-MM-DD',
+                        unit: 'day'
+                        },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                        display: true,
+                        labelString: 'Currency Rate (CNY)'
+                        },
+                    ticks: {
+                        suggestedMin: minValue,
+                        suggestedMax: maxValue
+                        }
+                        }]
+                    }
+                }
+            });
+        }
+    })  // Close 'addEventListener' function here
+} 
+
  const btn3 = document.getElementsByClassName("Trends30d");
  for (let i = 0; i < btn3.length; i++) {
      btn3[i].addEventListener('click', function () {
@@ -147,42 +151,43 @@ for (let i = 0; i < btn1.length; i++) {
              let yValues = xyValues.map(obj => obj.y);
              let minValue = Math.min(...yValues);
              let maxValue = Math.max(...yValues);
+           
              new Chart("myChart", {
-                 type: "scatter",
-                 data: {
-                     datasets: [{
-                         label: 'Currency over Time',
-                         pointRadius: 4,
-                         pointBackgroundColor: "rgba(0,0,255,1)",
-                         data: xyValues
-                     }]
-                 },
-                 options: {
-                     scales: {
-                         x: {
-                             type: 'time',
-                             time: {
-                                 unit: 'day',
-                                 displayFormats: {
-                                     day: 'MMM DD'
-                                 },
-                                 tooltipFormat: 'll'
-                             },
-                             title: {
-                                 display: true,
-                                 text: 'Date'
-                             }
-                         },
-                         y: {
-                             title: {
-                                 display: true,
-                                 text: 'Currency Rate'
-                             }
-                         }
-                     }
-                 }
-             });
-         } // close the onload function here
-     }); // close the addEventListener function here
- } // close the for loop here
- 
+                type: "scatter",
+                data: {
+                    datasets: [{
+                    pointRadius: 4,
+                    pointBackgroundColor: "rgb(0,0,255)",
+                    data: xyValues
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                        parser: 'YYYY-MM-DD',
+                        unit: 'day'
+                        },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                        display: true,
+                        labelString: 'Currency Rate (CNY)'
+                        },
+                    ticks: {
+                        suggestedMin: minValue,
+                        suggestedMax: maxValue
+                        }
+                        }]
+                    }
+                }
+            });
+        }
+    })  // Close 'addEventListener' function here
+} 
