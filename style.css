@@ -60,7 +60,7 @@ html{
         color: black;
         display: flex;
         position: relative;
-        left: 1050px;
+        left: 880px;
         bottom: 147.8px;
        }
      .Convert{
@@ -79,7 +79,7 @@ html{
                border: 2px solid rgb(28, 110, 164); 
                display: inline-block;
                position: relative;
-               left: 465px;
+               left: 220px;
                bottom: 125px;
              }
      .Convert:hover {
@@ -166,7 +166,7 @@ html{
             border: 2px solid rgb(28, 110, 164); 
             display: inline-block;
             position: relative;
-            left: 470px;
+            left: 222px;
             bottom: 125px;
            }
      .reset:hover {
@@ -182,7 +182,7 @@ html{
            }
      .To2{
           position: relative;
-          left: 1050px;
+          left: 880px;
           bottom: 137.9px;
          }
      .circle {
@@ -191,29 +191,23 @@ html{
               border-radius: 50%;
               background-color: white;
               position: relative;
-              left: 945px;
+              left: 745px;
               bottom: 458px;
              }
      .Arrow{
              width: 66.67px;
              height: 50.78px;
              position: relative;
-             left: 958px;
+             left: 758px;
              bottom: 530px;
            }
      .error1{
             position: relative;
-            left: 870px;
+            left: 670px;
             bottom: 520px;
             font-size: 20px;
             color: red;
           }
 
-
-    /*.USD{
-         position: relative;
-         left: 560px;
-         bottom: 308px;
-        }
     
 
