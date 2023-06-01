@@ -208,6 +208,13 @@ html{
             font-size: 20px;
             color: red;
           }
+     .result{
+             position: relative;
+             bottom: 518px;
+             left: 600px;
+             font-size: 27px;
+             color: #0055FF;
+     }
 
     
 
