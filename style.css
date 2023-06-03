@@ -6,6 +6,7 @@ html{
           background: -moz-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
           background: -webkit-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
           background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
+          position: fixed;
         }
     h1{
        font-family: "Arial Black", Gadget, sans-serif;
@@ -14,8 +15,8 @@ html{
        word-spacing: 2px;
        color: #3377FF;
        display: flex;
-       position: relative;
-       left: 420px;
+       position: fixed;
+       left: 660px;
       }
      span{
            color: #FF8C19;
@@ -36,32 +37,32 @@ html{
              font-size: 22px;
              color: black;
              display: flex;
-             position: relative;
-             left: 71px;
-             top: 15px;
+             position: fixed;
+             left: 400px;
+             top: 150px;
             }
     .Amount2{
-             position: relative;
-             left: 140px;
-             top: 18px;
+             position: fixed;
+             left: 398px;
+             top: 205px;
             }
     .From{
           font-family: "Arial Black", Gadget, sans-serif;
           font-size: 22px;
           color: black;
           display: flex;
-          position: relative;
-          left: 406px;
-          bottom: 44px;
+          position: fixed;
+          left: 700px;
+          top: 172px;
          }
     .To{
         font-family: "Arial Black", Gadget, sans-serif;
         font-size: 22px;
         color: black;
         display: flex;
-        position: relative;
-        left: 880px;
-        bottom: 147.8px;
+        position: fixed;
+        left: 1100px;
+        top: 172px;
        }
      .Convert{
                color: rgb(255, 255, 255); 
@@ -78,9 +79,9 @@ html{
                box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
                border: 2px solid rgb(28, 110, 164); 
                display: inline-block;
-               position: relative;
-               left: 220px;
-               bottom: 125px;
+               position: fixed;
+               left: 397px;
+               top: 240px;
              }
      .Convert:hover {
                      background:#99FFFF; 
@@ -140,8 +141,11 @@ html{
                background-color: #D3D3D3;
                border-radius: 14px;
                width: 1250px;
-               height: 200px;
+               height: 220px;
                margin:auto;
+               position: fixed;
+               left: 330px;
+               top: 120px;
              }   
      .Module2{
                background-color: #D3D3D3;
@@ -149,6 +153,9 @@ html{
                width: 1250px;
                height: 200px;
                margin: auto;
+               position: fixed;
+               left: 330px;
+               top: 360px;
              } 
      .reset{
             color: #FF33FF; 
@@ -165,9 +172,9 @@ html{
             box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
             border: 2px solid rgb(28, 110, 164); 
             display: inline-block;
-            position: relative;
-            left: 222px;
-            bottom: 125px;
+            position: fixed;
+            left: 517px;
+            top: 240px;
            }
      .reset:hover {
                        background:grey; 
@@ -176,35 +183,35 @@ html{
                         background:#FF2A00; 
                        }  
      .From2{
-             position: relative;
-             left: 407px;
-             bottom: 34px;
+             position: fixed;
+             left: 701px;
+             top: 206px;
            }
      .To2{
-          position: relative;
-          left: 880px;
-          bottom: 137.9px;
+          position: fixed;
+          left: 1100px;
+          top: 206px;
          }
      .circle {
               width: 90px;
               height: 90px;
               border-radius: 50%;
               background-color: white;
-              position: relative;
-              left: 745px;
-              bottom: 458px;
+              position: fixed;
+              left: 975px;
+              top: 168px;
              }
      .Arrow{
              width: 66.67px;
              height: 50.78px;
-             position: relative;
-             left: 758px;
-             bottom: 530px;
+             position: fixed;
+             left: 989px;
+             top: 186px;
            }
      .error1{
-            position: relative;
-            left: 670px;
-            bottom: 520px;
+            position: fixed;
+            left: 900px;
+            top: 264px;
             font-size: 20px;
             color: red;
           }
