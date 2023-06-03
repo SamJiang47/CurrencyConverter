@@ -28,9 +28,9 @@ html{
               word-spacing: 2px;
               color: #113300;
               display: flex;
-              position: relative;
-              left: 60px;
-              top: 30px;
+              position: fixed;
+              left: 400px;
+              top: 360px;
              }
     .Amount1{
              font-family: "Arial Black", Gadget, sans-serif;
@@ -103,9 +103,9 @@ html{
                background: #801A99;
                border: #801A99; 
                display: inline-block;
-               position: relative;
-               left: 200px;
-               top: 60px;           
+               position: fixed;
+               left: 600px;
+               top: 470px;           
               }
      .Trends7d:hover {
                       background:grey; 
@@ -127,9 +127,9 @@ html{
                 background:#801A99;  
                 border: #801A99; 
                 display: inline-block;
-                position: relative;
-                left: 220px;
-                top: 60px; 
+                position: fixed;
+                left: 770px;
+                top: 470px; 
                }
      .Trends30d:hover {
                        background:grey; 
@@ -215,10 +215,17 @@ html{
             font-size: 20px;
             color: red;
           }
+     .error2{
+        position: fixed;
+        left: 600px;
+        top: 364px;
+        font-size: 27px;
+        color: #FF33BB;
+     }
      .result{
-             position: relative;
-             bottom: 518px;
-             left: 600px;
+             position: fixed;
+             top: 260px;
+             left: 834px;
              font-size: 27px;
              color: #0055FF;
      }

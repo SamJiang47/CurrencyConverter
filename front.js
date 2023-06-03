@@ -13,18 +13,22 @@ function changeFormat(body) {
   return xyValues;
 }
 
-function checkSelections() {
+function checkSelections() { //conditional error display function
   const select1 = document.getElementById("From");
   const select2 = document.getElementById("To");
   const errorElement1 = document.getElementById("error1");
+  const errorElement2 = document.getElementById("error2");
   if (select1.value === select2.value ){
   errorElement1.style.display = "block"; 
+  errorElement2.style.display = "block";
   }
   else if (select1.value === "" || select2.value === "" ){
   errorElement1.style.display = "none"; 
+  errorElement2.style.display = "block";
   }
   else {
-  errorElement1.style.display = "none";  
+  errorElement1.style.display = "none";
+  errorElement2.style.display = "none"; 
   }
 } 
 
