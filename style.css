@@ -222,13 +222,34 @@ html{
         font-size: 27px;
         color: #FF33BB;
      }
-     .result{
+     .result1{
              position: fixed;
              top: 260px;
              left: 834px;
              font-size: 27px;
              color: #0055FF;
      }
+     .result2{
+              position: fixed;
+              top: 364px;
+              left: 700px;
+              font-size: 27px;
+              color: #0055FF;
+             }
+    .canvas{
+             position: fixed;
+             background-color: whitesmoke;
+             left: 427px;
+             bottom: 40px;
+             display: none;
+           }
+    .myChart{
+              position: fixed;
+              bottom: 40px;
+              left: 500px;
+              width: 920px; 
+              height: 360px;
+            }
 
     
 
