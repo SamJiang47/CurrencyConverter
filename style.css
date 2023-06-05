@@ -239,13 +239,13 @@ html{
     .canvas{
              position: fixed;
              background-color: whitesmoke;
-             left: 427px;
-             bottom: 40px;
+             left: 430px;
+             bottom: 12px;
              display: none;
            }
     .myChart{
               position: fixed;
-              bottom: 40px;
+              bottom: 12px;
               left: 500px;
               width: 920px; 
               height: 360px;
