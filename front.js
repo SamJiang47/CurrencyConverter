@@ -5,6 +5,27 @@ const errorElement2 = document.getElementById("error2");
 const select1 = document.getElementById("From");
 const select2 = document.getElementById("To");
 
+function adjustZoom() {
+  var screenWidth = window.innerWidth;
+
+  // Adjust the zoom level based on the screen width
+  if (screenWidth < 1280) {
+    document.body.style.zoom = "80%"; // Adjust the zoom level as per your requirement
+  } else if (screenWidth >= 1280 && screenWidth < 1600) {
+    document.body.style.zoom = "100%"; // Adjust the zoom level as per your requirement
+  } else {
+    document.body.style.zoom = "120%"; // Adjust the zoom level as per your requirement
+  }
+}
+
+window.onload = function () { // Call the adjustZoom function when the window is loaded
+  adjustZoom();
+};
+
+window.onresize = function () {// Call the adjustZoom function when the window is resized
+  adjustZoom();
+};
+
 function changeFormat(body) {
   const xyValues = [];
   const result = body.result;
