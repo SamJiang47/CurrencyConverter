@@ -6,7 +6,10 @@ html{
           background: -moz-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
           background: -webkit-linear-gradient(top, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
           background: linear-gradient(to bottom, rgb(20,244,207) 0%, rgb(27,47,175) 100%);
-          position: fixed;
+          width: 905px;
+          height: 1029px;
+          margin: 0 auto;
+          position: relative;
         }
     h1{
        font-family: "Arial Black", Gadget, sans-serif;
